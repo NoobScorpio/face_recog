@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train A Face</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+        <!-- <script src="./LINKERS/train.js"></script> -->
+        <!-- <script data-main="scripts/main" src="require.js">
+           
+        </script>
+        <script>
+            
+        </script> -->
+        <script src="./LINKERS/train.js"></script>
+        <script src="./LINKERS/upload.js"></script>
+</head>
+
+<body>
+   
+
+    <button class="top-left btn-back"><a href="index.html">
+            <&nbspBack</a></button>
+    <center>
+        <h1 class="h1-train">Adding New Face </h1>
+    </center>
+
+    <div class="d-flex justify-content-between mt-5">
+    
+        <div><h3 class="h3">Person Name</h3>
+            
+            <input name="name" id="name" type="text" class="txt-area">
+            <p class="ml-5">Donot enter letters like <strong>,</strong> <strong>_</strong> <strong>/</strong> <strong>*</strong> etc</p>
+        </div>
+
+        <div class="mr-5">
+            <h3 class="h3 ">Person Designation</h3>
+            
+            <input name="design" id="design" type="text" class="txt-area">
+
+            <p class="ml-5">Donot enter letters like <strong>,</strong> <strong>_</strong> <strong>/</strong> <strong>*</strong> etc</p>
+            
+        </div>
+
+    </div>
+
+
+    <div class="d-flex justify-content-between mt-5">
+
+        <div>
+            <p class="h3">Take Photos</p>
+            <div class="instruct-div ">
+                <h6>Instructions</h6>
+                <p>Take 4 to 6 clear pictures of your face for training. 
+                Press <strong>Double tap S</strong> to save a pic and <strong>Q</strong> to quit</p>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button id="take" name="take" value="Take Photos" onclick="takePic();" class="other-btn mt-2"><i class="fa fa-camera-retro"></i> Take Photos</button></div>
+        </div>
+
+
+        <div id="uploadDiv" class="mr-5">
+            <p class="h3">Upload Photos <i class="fa fa-picture-o" aria-hidden="true"></i></p>
+           
+            <div class="d-flex justify-content-center ml-5">
+                    <label class="filelabel">
+                    <i class="fa fa-paperclip">
+                    </i>
+                    <span id="title" class="title">
+                        Add File
+                    </span> 
+                    <input class="FileUpload1" id="FileInput" onchange="GetFileInfo();" name="booking_attachment" type="file" multiple/>
+                    <!-- <script src="LINKERS/upload.js">
+                       
+                    </script> -->
+                    </label>
+            </div>
+           
+                <div class="d-flex justify-content-center ml-2">
+                
+                    <button id="upBtn" class="other-btn mt-4 ml-5" onclick="upload(); ">
+                        <i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
+
+                </div>
+        </div>
+
+
+    </div>
+    <div class="mt-3">&nbsp;</div>
+    <center><div class="mt-5 "><button name="save" id="save" onclick="trainFace()" class="btn mt-2">Save</button></div></center>
+</body>
+
+</html>

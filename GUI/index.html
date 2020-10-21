@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="main.css">
+    <title>FACE RECOGNITION</title>
+  </head>
+  <body>
+  <center><h1 class="h1">FACE RECOGNITION</h1></center>
+  <center><img width="120" src="./assets/person.png"></center>
+  <!-- <center><img width="250" src="./assets/train_button.png"></center> -->
+  <!-- <center><img width="250" src="./assets/recog_button.png"></center> -->
+  <center><a href="./train.html"><button class="btn">Train</button></a></center>
+  <center><a href="./recog.html"><button class="btn">Recognize</button></a></center>
+  <img width="100" class="bottom-left" width="250" src="./assets/logo.png">
+    <script src="./renderer.js"></script>
+  </body>
+</html>
